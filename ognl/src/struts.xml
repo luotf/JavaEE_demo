@@ -6,7 +6,7 @@
 		<action name="ognl" class="com.ltf.action.ognlTestAction">
 			<result name="success">/success.jsp</result>
 		</action>
-		
+		 
 	</package>
 	<constant name="struts.i18n.encoding" value="utf-8"></constant>
 	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
