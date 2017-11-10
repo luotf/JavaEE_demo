@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default">
+		<action name="converter1" class="com.ltf.action.ConverterAction" >
+			<result name="success">/show.jsp</result>
+		</action>
+		<action name="converter2" class="com.ltf.action.Converter2Action" >
+			<result name="success">/show2.jsp</result>
+		</action>
+	</package>
+</struts>    
