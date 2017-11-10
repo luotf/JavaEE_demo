@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default">
+		<!-- 用户登录 -->
+		<action name="login" class="com.ltf.action.LoginRegistAction" method="login"> 
+			<result name="success">/welcome.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		<action name="regis" class="com.ltf.action.LoginRegistAction" method="regis"> 
+			<result name="success">/welcome.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+	</package>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+</struts>    
