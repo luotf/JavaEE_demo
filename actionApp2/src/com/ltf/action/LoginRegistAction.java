@@ -5,7 +5,7 @@ import com.ltf.dao.UserDao;
 import com.ltf.model.User;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-
+ 
 public class LoginRegistAction extends ActionSupport{
 	private User user;
 	private String message;
