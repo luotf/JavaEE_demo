@@ -5,7 +5,7 @@ import java.util.Date;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BookAction extends ActionSupport {
- 
+   
 	private String bookName;
 	private String author;
 	private String bookNo;
