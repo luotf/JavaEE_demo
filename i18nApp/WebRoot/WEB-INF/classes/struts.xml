@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.costom.i18n.resources" value="mess"></constant>
+	<package name="default" extends="struts-default">
+	 	<interceptors>
+	 		<interceptor name="myInterceptor" class="com.ltf.interceptor.CheckInterceptor"></interceptor>
+	 	</interceptors>
+		<action name="SubscribeAction" class="com.ltf.action.SubscribeAction" method="subscribe">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>	
+			<interceptor-ref name="myInterceptor"></interceptor-ref>	
+		</action>
+		<action name="subscribe1" class="com.ltf.action.SubscribeAction" method="checkLocale">
+			<result name="success">/subscribe.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>	
+			<interceptor-ref name="myInterceptor"></interceptor-ref>	
+		</action>
+</package>
+</struts>    
