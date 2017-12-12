@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default" namespace="/">
+		<interceptors>
+	 		<interceptor name="myInterceptor" class="com.ltf.interceptor.AuthorityInterceptor"></interceptor>
+	 
+	 		<interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+                <interceptor-ref name="myInterceptor"></interceptor-ref>
+           </interceptor-stack>
+	 	</interceptors>
+	 	
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		
+		<global-results>    
+           <!-- 当返回login视图名时，转入/login.jsp页面 -->    
+           <result name="login">/login.jsp</result>    
+       </global-results>
+       
+		<action name="login" class="com.ltf.action.LoginAction" method="login">
+			<result name="input">/login.jsp</result> 
+			<result>/succ.jsp</result>
+		</action>
+		<action name="index" class="com.ltf.action.LoginAction" method="index">
+			<result name="success">/succ.jsp</result>
+		</action>
+</package>
+</struts>    
