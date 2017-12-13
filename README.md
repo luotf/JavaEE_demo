@@ -15,7 +15,7 @@ JavaEE课堂小demo
    * 在struts.xml文件的Action的配置中使用method属性。
    * 使用ActionContext类实现服务器计数器功能。
   ```
-> ### 实验二、Struts2类型转换练习
+> ### 实验二、Struts2类型转换练习([coverterApps](https://github.com/luotf/JavaEE_demo/tree/master/coverterApps))
 ```
 新建名为converterApp的web project，该应用允许用户输入一个或多个ISBN编码，要求使用自定义类型转换器将用户输入的字符串数组转换成ISBN类型。
 1. 创建Isbn.java类，该类中包含五个字符串属性，分别为图书、国家和语言、出版社、书序码、校验码。（关于13位的ISBN编码构成请看：参考资料）
@@ -38,7 +38,7 @@ JavaEE课堂小demo
    如果N为其他数字，校验码是数字N。;
    所以，该书的校验码是6。完整的国际标准书号号码为 ISBN 978-986-181-728-6
 ```
-> ### 实验三、实现Struts2自定义拦截器
+> ### 实验三、实现Struts2自定义拦截器([intercepterApp](https://github.com/luotf/JavaEE_demo/tree/master/intercepterApp))
 ```
 新建名为intercepterApp的web project，该应用使用拦截器实现访问者的访问权限控制。
 1. 创建login.jsp页面，该页面中包含一个表单，表单中有两个文本输入框，分别用于输入用户名和密码。表单的action属性为login。
@@ -51,7 +51,7 @@ JavaEE课堂小demo
 8. 定义并配置自定义拦截器，使得只有名为admin的登录用户可以访问当前这个web应用中的所有页面，其他访问者（包括未登录用户和用户名不是admin的用户）则无权访问。
 9. 在浏览器地址栏中输入：http://localhost:8088/interceptorApp/index.action，检查自定义拦截器是否起效。正确情况下，若用户未登录或登录用户名不是admin，则返回login.jsp页面提示用户使用admin用户名登录；若用户使用admin登录成功，则返回到index.jsp页面。
 ```
-> ### 实验四、使用Struts2控制文件的上传与下载
+> ### 实验四、使用Struts2控制文件的上传与下载([fileUpDownApp](https://github.com/luotf/JavaEE_demo/tree/master/fileUpDownApp))
 ```
 新建名为fileUpDownApp的web project，该应用使用struts2控制文件的上传与下载。
 1. 创建upload.jsp为文件上传页面，上传主题为个人资料的上传。该页面的表单中包含一个用于输入用户名的文本输入框，一个用于选择专业的下拉列表，一个用于选择年级的下拉列表，一个用于上传头像的文件标签，一个用于上传个人简历的文件标签，该表单的action属性为“upload”。要求对该表单中的用户输入进行验证。要求使用校验规则文件为用户名字段进行校验，用户名必须输入并且用户名长度限制在4到20个字符之间。要求手动实现头像上传和个人简历上传的输入验证，头像必须为gif或jpeg类型且小于50k的图像文件，个人简历必须为doc类型且小于2M的文本文件。
@@ -63,7 +63,7 @@ JavaEE课堂小demo
 7. 在struts.xml文件中对上述action进行配置。注意struts常量的配置。
 8. 要求该应用实现国际化，包括输出的错误信息。
 ```
-> ### 实验五、Spring设值注入
+> ### 实验五、Spring设值注入([SpringDITest](https://github.com/luotf/JavaEE_demo/tree/master/SpringDITest))
 ```
 新建名为SpringDITest的web project，该应用使用struts2与spring整合，完成用户数据的存储功能。
 1. 创建org.vo.User简单类，包括name与pwd两个字段； 
@@ -74,7 +74,7 @@ JavaEE课堂小demo
 6. 创建save_success.jsp页面，SaveAction返回“success”时跳转，显示用户存储成功的提示信息。
 7. 创建spring的配置文件applicationContext.xml，指定放在WEB-INF目录中；创建struts.properties文件，设置spring自动装配。
 ```
-> ### 补充实验1：OGNL表达式使用练习 
+> ### 补充实验1：OGNL表达式使用练习([ognl](https://github.com/luotf/JavaEE_demo/tree/master/ognl))
 
 ```
 1. 新建名为ognlApp的web应用。创建student类，student类中应有学号、姓名、性别、年龄和籍贯等属性。
@@ -92,7 +92,7 @@ JavaEE课堂小demo
    获取所有年龄为18的学生籍贯；获取名为“李四”的学生的学号。
 3. 访问静态成员：要求在index.jsp页面中显示出java.long.Math中的E值；要求在index.jsp页面中显示出系统环境变量“classpath”的值。
  ```
-> ### 补充实验2：Struts标签库使用练习
+> ### 补充实验2：Struts标签库使用练习([tagsApp](https://github.com/luotf/JavaEE_demo/tree/master/tagsApp))
 
 ```
 新建名为tagsApp的web project。要求实现以下内容：
@@ -105,7 +105,7 @@ JavaEE课堂小demo
 6. 创建success.jsp。在该页中输出action的结果参数age的内容。
 7. 在index.jsp中使用url标签输出带参数的url，参数名为id，参数值为101。
 ```
-> ### 补充实验3：Struts表单标签使用练习
+> ### 补充实验3：Struts表单标签使用练习([formTagsApp](https://github.com/luotf/JavaEE_demo/tree/master/formTagsApp))
 ```
 新建名为formTagsApp的web project。要求实现以下内容：
 1. 创建index.jsp页面。在该页面中使用doubleselect标签生成一个级联列表框，级联列表中的数据来源map集合：
@@ -120,7 +120,7 @@ JavaEE课堂小demo
 7. 创建名为FormTagsAction的action类以完成上述工作，并在struts.xml文件中进行相应的配置。
 ```
 
-> ### 补充实验4：Struts2输入校验练习
+> ### 补充实验4：Struts2输入校验练习([validationApp](https://github.com/luotf/JavaEE_demo/tree/master/validationApp))
 ```
 新建名为validationApp的web project，该应用允许用户输入一本图书的相关信息，要求对表单中的每个文件输入框进行输入校验。
 1. 创建input.jsp页面，该页面用于输入图书的以下信息：
@@ -137,7 +137,7 @@ JavaEE课堂小demo
 4. 要求使用Struts2的内建校验器校验“书名”、“作者”、“出版日期”、“价格”和“库存数量”字段；要求手动编写代码校验“书号”的有效性；
    要求手动编写代码校验“出版社”字段中是否包含了“出版社”三个字。
 ```
-> ### 补充实验5：Struts2国际化应用实现
+> ### 补充实验5：Struts2国际化应用实现([i18nApp](https://github.com/luotf/JavaEE_demo/tree/master/i18nApp))
 ```
 新建名为i18nApp的web project，该应用实现了一个简单的邮件订阅系统。具体要求如下：
 1. 创建subscribe.jsp页面，该页面中包含一个表单，表单内有一个文本输入框，一个提交按钮。文本输入框用于用户输入邮箱地址。
