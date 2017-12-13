@@ -13,7 +13,10 @@ public class SaveAction  extends ActionSupport{
 	private User user=null;
 	
 	public String execute(){
-		
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+	  		  userservice= (UserServiceImpl ) ctx.getBean("UserServiceImpl");
+
+
 		return SUCCESS;
 	}
 	
